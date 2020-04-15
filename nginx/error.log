@@ -1,0 +1,159 @@
+2020/04/14 23:49:57 [error] 7#7: *10 connect() failed (111: Connection refused) while connecting to upstream, client: 172.18.0.1, server: subnet_sync.local, request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.7:9004", host: "subnet_sync.local"
+2020/04/14 23:50:25 [info] 6#6: *11 client closed connection while waiting for request, client: 172.18.0.1, server: 0.0.0.0:80
+2020/04/14 23:50:25 [error] 7#7: *10 connect() failed (111: Connection refused) while connecting to upstream, client: 172.18.0.1, server: subnet_sync.local, request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.7:9004", host: "subnet_sync.local"
+2020/04/14 23:58:10 [error] 6#6: *15 connect() failed (111: Connection refused) while connecting to upstream, client: 172.18.0.1, server: subnet_sync.local, request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.7:9004", host: "subnet_sync.local"
+2020/04/14 23:58:33 [info] 6#6: *14 client closed connection while waiting for request, client: 172.18.0.1, server: 0.0.0.0:80
+2020/04/14 23:58:48 [error] 6#6: *18 connect() failed (111: Connection refused) while connecting to upstream, client: 172.18.0.1, server: subnet_sync.local, request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.7:9004", host: "subnet_sync.local"
+2020/04/14 23:58:49 [error] 6#6: *18 connect() failed (111: Connection refused) while connecting to upstream, client: 172.18.0.1, server: subnet_sync.local, request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.7:9004", host: "subnet_sync.local"
+2020/04/14 23:58:49 [error] 6#6: *18 connect() failed (111: Connection refused) while connecting to upstream, client: 172.18.0.1, server: subnet_sync.local, request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.7:9004", host: "subnet_sync.local"
+2020/04/14 23:58:50 [error] 6#6: *18 connect() failed (111: Connection refused) while connecting to upstream, client: 172.18.0.1, server: subnet_sync.local, request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.7:9004", host: "subnet_sync.local"
+2020/04/14 23:58:56 [notice] 1#1: signal 15 (SIGTERM) received, exiting
+2020/04/14 23:58:56 [notice] 7#7: exiting
+2020/04/14 23:58:56 [notice] 8#8: exiting
+2020/04/14 23:58:56 [notice] 9#9: exiting
+2020/04/14 23:58:56 [notice] 9#9: exit
+2020/04/14 23:58:56 [notice] 6#6: exiting
+2020/04/14 23:58:56 [notice] 7#7: exit
+2020/04/14 23:58:56 [notice] 8#8: exit
+2020/04/14 23:58:56 [notice] 6#6: exit
+2020/04/14 23:58:56 [notice] 1#1: signal 17 (SIGCHLD) received from 8
+2020/04/14 23:58:56 [notice] 1#1: worker process 8 exited with code 0
+2020/04/14 23:58:56 [notice] 1#1: worker process 7 exited with code 0
+2020/04/14 23:58:56 [notice] 1#1: worker process 9 exited with code 0
+2020/04/14 23:58:56 [notice] 1#1: signal 29 (SIGIO) received
+2020/04/14 23:58:56 [notice] 1#1: signal 17 (SIGCHLD) received from 9
+2020/04/14 23:58:56 [notice] 1#1: worker process 6 exited with code 0
+2020/04/14 23:58:56 [notice] 1#1: exit
+2020/04/14 23:58:57 [notice] 1#1: using the "epoll" event method
+2020/04/14 23:58:57 [notice] 1#1: nginx/1.16.1
+2020/04/14 23:58:57 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2020/04/14 23:58:57 [notice] 1#1: OS: Linux 4.19.76-linuxkit
+2020/04/14 23:58:57 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2020/04/14 23:58:57 [notice] 1#1: start worker processes
+2020/04/14 23:58:57 [notice] 1#1: start worker process 6
+2020/04/14 23:58:57 [notice] 1#1: start worker process 7
+2020/04/14 23:58:57 [notice] 1#1: start worker process 8
+2020/04/14 23:58:57 [notice] 1#1: start worker process 9
+2020/04/14 23:59:15 [notice] 1#1: signal 15 (SIGTERM) received, exiting
+2020/04/14 23:59:15 [notice] 8#8: exiting
+2020/04/14 23:59:15 [notice] 6#6: exiting
+2020/04/14 23:59:15 [notice] 6#6: exit
+2020/04/14 23:59:15 [notice] 7#7: exiting
+2020/04/14 23:59:15 [notice] 7#7: exit
+2020/04/14 23:59:15 [notice] 9#9: exiting
+2020/04/14 23:59:15 [notice] 8#8: exit
+2020/04/14 23:59:15 [notice] 9#9: exit
+2020/04/14 23:59:15 [notice] 1#1: signal 17 (SIGCHLD) received from 6
+2020/04/14 23:59:15 [notice] 1#1: worker process 6 exited with code 0
+2020/04/14 23:59:15 [notice] 1#1: signal 29 (SIGIO) received
+2020/04/14 23:59:15 [notice] 1#1: signal 17 (SIGCHLD) received from 7
+2020/04/14 23:59:15 [notice] 1#1: worker process 7 exited with code 0
+2020/04/14 23:59:15 [notice] 1#1: signal 29 (SIGIO) received
+2020/04/14 23:59:15 [notice] 1#1: signal 17 (SIGCHLD) received from 9
+2020/04/14 23:59:15 [notice] 1#1: worker process 8 exited with code 0
+2020/04/14 23:59:15 [notice] 1#1: worker process 9 exited with code 0
+2020/04/14 23:59:15 [notice] 1#1: exit
+2020/04/14 23:59:18 [notice] 1#1: using the "epoll" event method
+2020/04/14 23:59:18 [notice] 1#1: nginx/1.16.1
+2020/04/14 23:59:18 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2020/04/14 23:59:18 [notice] 1#1: OS: Linux 4.19.76-linuxkit
+2020/04/14 23:59:18 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2020/04/14 23:59:18 [notice] 1#1: start worker processes
+2020/04/14 23:59:18 [notice] 1#1: start worker process 7
+2020/04/14 23:59:18 [notice] 1#1: start worker process 8
+2020/04/14 23:59:18 [notice] 1#1: start worker process 9
+2020/04/14 23:59:18 [notice] 1#1: start worker process 10
+2020/04/14 23:59:32 [error] 7#7: *2 connect() failed (111: Connection refused) while connecting to upstream, client: 172.18.0.1, server: subnet_sync.local, request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.7:9004", host: "subnet_sync.local"
+2020/04/14 23:59:54 [info] 7#7: *1 client closed connection while waiting for request, client: 172.18.0.1, server: 0.0.0.0:80
+2020/04/14 23:59:56 [error] 7#7: *2 connect() failed (111: Connection refused) while connecting to upstream, client: 172.18.0.1, server: subnet_sync.local, request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.7:9004", host: "subnet_sync.local"
+2020/04/14 23:59:56 [error] 7#7: *2 connect() failed (111: Connection refused) while connecting to upstream, client: 172.18.0.1, server: subnet_sync.local, request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.7:9004", host: "subnet_sync.local"
+2020/04/15 00:00:05 [error] 7#7: *2 connect() failed (111: Connection refused) while connecting to upstream, client: 172.18.0.1, server: subnet_sync.local, request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.7:9004", host: "subnet_sync.local"
+2020/04/15 00:02:40 [info] 7#7: *4 client closed connection while waiting for request, client: 172.18.0.1, server: 0.0.0.0:80
+2020/04/15 00:05:47 [notice] 1#1: signal 15 (SIGTERM) received, exiting
+2020/04/15 00:05:47 [notice] 7#7: exiting
+2020/04/15 00:05:47 [notice] 10#10: exiting
+2020/04/15 00:05:47 [notice] 8#8: exiting
+2020/04/15 00:05:47 [notice] 9#9: exiting
+2020/04/15 00:05:47 [notice] 7#7: exit
+2020/04/15 00:05:47 [notice] 10#10: exit
+2020/04/15 00:05:47 [notice] 8#8: exit
+2020/04/15 00:05:47 [notice] 9#9: exit
+2020/04/15 00:05:47 [notice] 1#1: signal 17 (SIGCHLD) received from 7
+2020/04/15 00:05:47 [notice] 1#1: worker process 7 exited with code 0
+2020/04/15 00:05:47 [notice] 1#1: worker process 8 exited with code 0
+2020/04/15 00:05:47 [notice] 1#1: worker process 10 exited with code 0
+2020/04/15 00:05:47 [notice] 1#1: signal 29 (SIGIO) received
+2020/04/15 00:05:47 [notice] 1#1: signal 17 (SIGCHLD) received from 10
+2020/04/15 00:05:47 [notice] 1#1: worker process 9 exited with code 0
+2020/04/15 00:05:47 [notice] 1#1: exit
+2020/04/15 00:08:06 [notice] 1#1: using the "epoll" event method
+2020/04/15 00:08:06 [notice] 1#1: nginx/1.16.1
+2020/04/15 00:08:06 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2020/04/15 00:08:06 [notice] 1#1: OS: Linux 4.19.76-linuxkit
+2020/04/15 00:08:06 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2020/04/15 00:08:06 [notice] 1#1: start worker processes
+2020/04/15 00:08:06 [notice] 1#1: start worker process 7
+2020/04/15 00:08:06 [notice] 1#1: start worker process 8
+2020/04/15 00:08:06 [notice] 1#1: start worker process 9
+2020/04/15 00:08:06 [notice] 1#1: start worker process 10
+2020/04/15 00:10:13 [notice] 1#1: signal 15 (SIGTERM) received, exiting
+2020/04/15 00:10:13 [notice] 9#9: exiting
+2020/04/15 00:10:13 [notice] 8#8: exiting
+2020/04/15 00:10:13 [notice] 8#8: exit
+2020/04/15 00:10:13 [notice] 10#10: exiting
+2020/04/15 00:10:13 [notice] 10#10: exit
+2020/04/15 00:10:13 [notice] 7#7: exiting
+2020/04/15 00:10:13 [notice] 9#9: exit
+2020/04/15 00:10:13 [notice] 7#7: exit
+2020/04/15 00:10:13 [notice] 1#1: signal 17 (SIGCHLD) received from 8
+2020/04/15 00:10:13 [notice] 1#1: worker process 8 exited with code 0
+2020/04/15 00:10:13 [notice] 1#1: signal 29 (SIGIO) received
+2020/04/15 00:10:13 [notice] 1#1: signal 17 (SIGCHLD) received from 9
+2020/04/15 00:10:13 [notice] 1#1: worker process 9 exited with code 0
+2020/04/15 00:10:13 [notice] 1#1: worker process 10 exited with code 0
+2020/04/15 00:10:13 [notice] 1#1: signal 29 (SIGIO) received
+2020/04/15 00:10:13 [notice] 1#1: signal 17 (SIGCHLD) received from 10
+2020/04/15 00:10:13 [notice] 1#1: signal 17 (SIGCHLD) received from 7
+2020/04/15 00:10:13 [notice] 1#1: worker process 7 exited with code 0
+2020/04/15 00:10:13 [notice] 1#1: exit
+2020/04/15 00:10:21 [notice] 1#1: using the "epoll" event method
+2020/04/15 00:10:21 [notice] 1#1: nginx/1.16.1
+2020/04/15 00:10:21 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2020/04/15 00:10:21 [notice] 1#1: OS: Linux 4.19.76-linuxkit
+2020/04/15 00:10:21 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2020/04/15 00:10:21 [notice] 1#1: start worker processes
+2020/04/15 00:10:21 [notice] 1#1: start worker process 6
+2020/04/15 00:10:21 [notice] 1#1: start worker process 7
+2020/04/15 00:10:21 [notice] 1#1: start worker process 8
+2020/04/15 00:10:21 [notice] 1#1: start worker process 9
+2020/04/15 00:10:27 [notice] 1#1: signal 15 (SIGTERM) received, exiting
+2020/04/15 00:10:27 [notice] 6#6: exiting
+2020/04/15 00:10:27 [notice] 7#7: exiting
+2020/04/15 00:10:27 [notice] 8#8: exiting
+2020/04/15 00:10:27 [notice] 8#8: exit
+2020/04/15 00:10:27 [notice] 9#9: exiting
+2020/04/15 00:10:27 [notice] 6#6: exit
+2020/04/15 00:10:27 [notice] 7#7: exit
+2020/04/15 00:10:27 [notice] 9#9: exit
+2020/04/15 00:10:27 [notice] 1#1: signal 17 (SIGCHLD) received from 6
+2020/04/15 00:10:27 [notice] 1#1: worker process 6 exited with code 0
+2020/04/15 00:10:27 [notice] 1#1: worker process 7 exited with code 0
+2020/04/15 00:10:27 [notice] 1#1: worker process 8 exited with code 0
+2020/04/15 00:10:27 [notice] 1#1: signal 29 (SIGIO) received
+2020/04/15 00:10:27 [notice] 1#1: signal 17 (SIGCHLD) received from 7
+2020/04/15 00:10:27 [notice] 1#1: signal 17 (SIGCHLD) received from 9
+2020/04/15 00:10:27 [notice] 1#1: worker process 9 exited with code 0
+2020/04/15 00:10:27 [notice] 1#1: exit
+2020/04/15 00:10:35 [notice] 1#1: using the "epoll" event method
+2020/04/15 00:10:35 [notice] 1#1: nginx/1.16.1
+2020/04/15 00:10:35 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2020/04/15 00:10:35 [notice] 1#1: OS: Linux 4.19.76-linuxkit
+2020/04/15 00:10:35 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2020/04/15 00:10:35 [notice] 1#1: start worker processes
+2020/04/15 00:10:35 [notice] 1#1: start worker process 6
+2020/04/15 00:10:35 [notice] 1#1: start worker process 7
+2020/04/15 00:10:35 [notice] 1#1: start worker process 8
+2020/04/15 00:10:35 [notice] 1#1: start worker process 9
+2020/04/15 00:12:40 [info] 6#6: *2 client closed connection while waiting for request, client: 172.18.0.1, server: 0.0.0.0:80
+2020/04/15 00:16:15 [info] 6#6: *4 client closed connection while waiting for request, client: 172.18.0.1, server: 0.0.0.0:80
+2020/04/15 00:20:39 [info] 6#6: *8 client closed connection while waiting for request, client: 172.18.0.1, server: 0.0.0.0:80
