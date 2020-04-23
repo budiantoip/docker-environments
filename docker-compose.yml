@@ -1,0 +1,222 @@
+version: '3'
+
+services:
+    web:
+        image: nginx:stable
+        container_name: web
+        networks: 
+            - local_network
+        volumes:
+            - /usr/local/var/www/html:/var/www/html
+            - ./nginx:/etc/nginx
+        ports:
+            - 80:80
+            - 443:443
+        depends_on:
+            - app56
+            - app70
+            - app71
+            - app72
+            - app73
+
+    apache:
+        image: budiantoip/apache:latest
+        container_name: apache
+        networks:
+            - local_network
+        volumes:
+            - /usr/local/var/www/html:/var/www/html
+            - /usr/local/var/www/html/apache/conf/apache2.conf:/etc/apache2/apache2.conf
+            - /usr/local/var/www/html/apache/mods-enabled/dir.conf:/etc/apache2/mods-enabled/dir.conf
+            - /usr/local/var/www/html/apache/php/7.0/conf/php.ini:/etc/php/7.0/apache2/php.ini
+            - /usr/local/var/www/html/apache/php/7.0/conf/php.ini:/etc/php/7.0/fpm/php.ini
+            - /usr/local/var/www/html/apache/php/7.0/conf/php.ini:/etc/php/7.0/cli/php.ini
+            - /usr/local/var/www/html/apache/conf/vhosts:/etc/apache2/sites-enabled
+            - /usr/local/var/www/html/apache/logs:/var/log/apache2
+        environment:
+            - APACHE_SERVER_NAME=apache
+            - APACHE_LOG_DIR=/var/logs/apache2
+            - PHP_SHORT_OPEN_TAG=On
+            - PHP_ERROR_REPORTING=E_ALL
+            - PHP_DISPLAY_ERRORS=On
+            - PHP_HTML_ERRORS=On
+            - PHP_XDEBUG_ENABLED=true
+        cap_add:
+            - SYS_TIME
+            - SYS_NICE
+        ports:
+            - 8080:80
+            - 8443:443
+
+    app56:
+        container_name: app56
+        image: budiantoip/php-fpm:5.6.40-bitnami-dev
+        networks:
+            - local_network
+        volumes:
+            - /usr/local/var/www/html:/app
+            - /usr/local/var/www/html:/var/www/html
+            
+        ports:
+            - 9000:9000
+        depends_on:
+            - mysql
+            - mongo
+            - redis
+            - beanstalk
+        environment:
+            - REDIS_PORT=6379
+            - REDIS_HOST=redis
+            - MONGO_HOST=mongo
+            - MONGO_PORT=27017
+            - BEANSTALK_HOST=beanstalk
+            - BEANSTALK_PORT=11300
+
+    app70:
+        container_name: app70
+        image: budiantoip/php-fpm:7.0.33-bitnami-dev
+        networks:
+            - local_network
+        volumes:
+            - /usr/local/var/www/html:/app
+            - /usr/local/var/www/html:/var/www/html
+            
+        ports:
+            - 9001:9000
+        depends_on:
+            - mysql
+            - mongo
+            - redis
+            - beanstalk
+        environment:
+            - MYSQL_HOST=mysql
+            - MYSQL_PORT=3306
+            - REDIS_PORT=6379
+            - REDIS_HOST=redis
+            - MONGO_HOST=mongo
+            - MONGO_PORT=27017
+            - BEANSTALK_HOST=beanstalk
+            - BEANSTALK_PORT=11300
+
+    app71:
+        container_name: app71
+        image: budiantoip/php-fpm:7.1.33-bitnami-dev
+        networks:
+            - local_network
+        volumes:
+            - /usr/local/var/www/html:/app
+            - /usr/local/var/www/html:/var/www/html
+            
+        ports:
+            - 9002:9000
+        depends_on:
+            - mysql
+            - mongo
+            - redis
+            - beanstalk
+        environment:
+            - MYSQL_HOST=mysql
+            - MYSQL_PORT=3306
+            - REDIS_PORT=6379
+            - REDIS_HOST=redis
+            - MONGO_HOST=mongo
+            - MONGO_PORT=27017
+            - BEANSTALK_HOST=beanstalk
+            - BEANSTALK_PORT=11300
+
+    app72:
+        container_name: app72
+        image: budiantoip/php-fpm:7.2.29-bitnami-dev
+        networks:
+            - local_network
+        volumes:
+            - /usr/local/var/www/html:/app
+            - /usr/local/var/www/html:/var/www/html
+            
+        ports:
+            - 9003:9000
+        depends_on:
+            - mysql
+            - mongo
+            - redis
+            - beanstalk
+        environment:
+            - MYSQL_HOST=mysql
+            - MYSQL_PORT=3306
+            - REDIS_PORT=6379
+            - REDIS_HOST=redis
+            - MONGO_HOST=mongo
+            - MONGO_PORT=27017
+            - BEANSTALK_HOST=beanstalk
+            - BEANSTALK_PORT=11300
+
+    app73:
+        container_name: app73
+        image: budiantoip/php-fpm:7.3.16-bitnami-dev
+        networks: 
+            - local_network
+        volumes:
+            - /usr/local/var/www/html:/app
+            - /usr/local/var/www/html:/var/www/html
+            
+        ports:
+            - 9004:9000
+        depends_on:
+            - mysql
+            - mongo
+            - redis
+            - beanstalk
+        environment:
+            - REDIS_PORT=6379
+            - REDIS_HOST=redis
+            - MONGO_HOST=mongo
+            - MONGO_PORT=27017
+            - BEANSTALK_HOST=beanstalk
+            - BEANSTALK_PORT=11300
+
+    mysql:
+        container_name: mysql
+        image: mariadb:10.5.2
+        networks: 
+            - local_network
+        environment:
+            - MYSQL_ROOT_PASSWORD=secret
+        volumes:
+            - yogurt_mysql-data:/var/lib/mysql
+            - ./mysql/log:/var/log/mysql
+            - ./mysql/config/my.cnf:/etc/mysql/my.cnf
+        ports:
+            - 3306:3306
+
+    mongo:
+        container_name: mongo
+        image: mongo:4.2.5
+        networks: 
+            - local_network
+        volumes:
+            - yogurt_mongo-data:/data/db
+        ports:
+            - 27017:27017
+
+    redis:
+        image: redis:5.0.8
+        container_name: redis
+        networks: 
+            - local_network
+        ports:
+            - 6379:6379
+
+    beanstalk:
+        container_name: beanstalk
+        image: schickling/beanstalkd
+        networks: 
+            - local_network
+        ports:
+            -  11300:11300
+
+networks:
+    local_network:
+
+volumes:
+    yogurt_mysql-data:
+    yogurt_mongo-data:

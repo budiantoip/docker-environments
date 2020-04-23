@@ -1,159 +1,77 @@
-2020/04/14 23:49:57 [error] 7#7: *10 connect() failed (111: Connection refused) while connecting to upstream, client: 172.18.0.1, server: subnet_sync.local, request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.7:9004", host: "subnet_sync.local"
-2020/04/14 23:50:25 [info] 6#6: *11 client closed connection while waiting for request, client: 172.18.0.1, server: 0.0.0.0:80
-2020/04/14 23:50:25 [error] 7#7: *10 connect() failed (111: Connection refused) while connecting to upstream, client: 172.18.0.1, server: subnet_sync.local, request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.7:9004", host: "subnet_sync.local"
-2020/04/14 23:58:10 [error] 6#6: *15 connect() failed (111: Connection refused) while connecting to upstream, client: 172.18.0.1, server: subnet_sync.local, request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.7:9004", host: "subnet_sync.local"
-2020/04/14 23:58:33 [info] 6#6: *14 client closed connection while waiting for request, client: 172.18.0.1, server: 0.0.0.0:80
-2020/04/14 23:58:48 [error] 6#6: *18 connect() failed (111: Connection refused) while connecting to upstream, client: 172.18.0.1, server: subnet_sync.local, request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.7:9004", host: "subnet_sync.local"
-2020/04/14 23:58:49 [error] 6#6: *18 connect() failed (111: Connection refused) while connecting to upstream, client: 172.18.0.1, server: subnet_sync.local, request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.7:9004", host: "subnet_sync.local"
-2020/04/14 23:58:49 [error] 6#6: *18 connect() failed (111: Connection refused) while connecting to upstream, client: 172.18.0.1, server: subnet_sync.local, request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.7:9004", host: "subnet_sync.local"
-2020/04/14 23:58:50 [error] 6#6: *18 connect() failed (111: Connection refused) while connecting to upstream, client: 172.18.0.1, server: subnet_sync.local, request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.7:9004", host: "subnet_sync.local"
-2020/04/14 23:58:56 [notice] 1#1: signal 15 (SIGTERM) received, exiting
-2020/04/14 23:58:56 [notice] 7#7: exiting
-2020/04/14 23:58:56 [notice] 8#8: exiting
-2020/04/14 23:58:56 [notice] 9#9: exiting
-2020/04/14 23:58:56 [notice] 9#9: exit
-2020/04/14 23:58:56 [notice] 6#6: exiting
-2020/04/14 23:58:56 [notice] 7#7: exit
-2020/04/14 23:58:56 [notice] 8#8: exit
-2020/04/14 23:58:56 [notice] 6#6: exit
-2020/04/14 23:58:56 [notice] 1#1: signal 17 (SIGCHLD) received from 8
-2020/04/14 23:58:56 [notice] 1#1: worker process 8 exited with code 0
-2020/04/14 23:58:56 [notice] 1#1: worker process 7 exited with code 0
-2020/04/14 23:58:56 [notice] 1#1: worker process 9 exited with code 0
-2020/04/14 23:58:56 [notice] 1#1: signal 29 (SIGIO) received
-2020/04/14 23:58:56 [notice] 1#1: signal 17 (SIGCHLD) received from 9
-2020/04/14 23:58:56 [notice] 1#1: worker process 6 exited with code 0
-2020/04/14 23:58:56 [notice] 1#1: exit
-2020/04/14 23:58:57 [notice] 1#1: using the "epoll" event method
-2020/04/14 23:58:57 [notice] 1#1: nginx/1.16.1
-2020/04/14 23:58:57 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
-2020/04/14 23:58:57 [notice] 1#1: OS: Linux 4.19.76-linuxkit
-2020/04/14 23:58:57 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
-2020/04/14 23:58:57 [notice] 1#1: start worker processes
-2020/04/14 23:58:57 [notice] 1#1: start worker process 6
-2020/04/14 23:58:57 [notice] 1#1: start worker process 7
-2020/04/14 23:58:57 [notice] 1#1: start worker process 8
-2020/04/14 23:58:57 [notice] 1#1: start worker process 9
-2020/04/14 23:59:15 [notice] 1#1: signal 15 (SIGTERM) received, exiting
-2020/04/14 23:59:15 [notice] 8#8: exiting
-2020/04/14 23:59:15 [notice] 6#6: exiting
-2020/04/14 23:59:15 [notice] 6#6: exit
-2020/04/14 23:59:15 [notice] 7#7: exiting
-2020/04/14 23:59:15 [notice] 7#7: exit
-2020/04/14 23:59:15 [notice] 9#9: exiting
-2020/04/14 23:59:15 [notice] 8#8: exit
-2020/04/14 23:59:15 [notice] 9#9: exit
-2020/04/14 23:59:15 [notice] 1#1: signal 17 (SIGCHLD) received from 6
-2020/04/14 23:59:15 [notice] 1#1: worker process 6 exited with code 0
-2020/04/14 23:59:15 [notice] 1#1: signal 29 (SIGIO) received
-2020/04/14 23:59:15 [notice] 1#1: signal 17 (SIGCHLD) received from 7
-2020/04/14 23:59:15 [notice] 1#1: worker process 7 exited with code 0
-2020/04/14 23:59:15 [notice] 1#1: signal 29 (SIGIO) received
-2020/04/14 23:59:15 [notice] 1#1: signal 17 (SIGCHLD) received from 9
-2020/04/14 23:59:15 [notice] 1#1: worker process 8 exited with code 0
-2020/04/14 23:59:15 [notice] 1#1: worker process 9 exited with code 0
-2020/04/14 23:59:15 [notice] 1#1: exit
-2020/04/14 23:59:18 [notice] 1#1: using the "epoll" event method
-2020/04/14 23:59:18 [notice] 1#1: nginx/1.16.1
-2020/04/14 23:59:18 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
-2020/04/14 23:59:18 [notice] 1#1: OS: Linux 4.19.76-linuxkit
-2020/04/14 23:59:18 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
-2020/04/14 23:59:18 [notice] 1#1: start worker processes
-2020/04/14 23:59:18 [notice] 1#1: start worker process 7
-2020/04/14 23:59:18 [notice] 1#1: start worker process 8
-2020/04/14 23:59:18 [notice] 1#1: start worker process 9
-2020/04/14 23:59:18 [notice] 1#1: start worker process 10
-2020/04/14 23:59:32 [error] 7#7: *2 connect() failed (111: Connection refused) while connecting to upstream, client: 172.18.0.1, server: subnet_sync.local, request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.7:9004", host: "subnet_sync.local"
-2020/04/14 23:59:54 [info] 7#7: *1 client closed connection while waiting for request, client: 172.18.0.1, server: 0.0.0.0:80
-2020/04/14 23:59:56 [error] 7#7: *2 connect() failed (111: Connection refused) while connecting to upstream, client: 172.18.0.1, server: subnet_sync.local, request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.7:9004", host: "subnet_sync.local"
-2020/04/14 23:59:56 [error] 7#7: *2 connect() failed (111: Connection refused) while connecting to upstream, client: 172.18.0.1, server: subnet_sync.local, request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.7:9004", host: "subnet_sync.local"
-2020/04/15 00:00:05 [error] 7#7: *2 connect() failed (111: Connection refused) while connecting to upstream, client: 172.18.0.1, server: subnet_sync.local, request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.7:9004", host: "subnet_sync.local"
-2020/04/15 00:02:40 [info] 7#7: *4 client closed connection while waiting for request, client: 172.18.0.1, server: 0.0.0.0:80
-2020/04/15 00:05:47 [notice] 1#1: signal 15 (SIGTERM) received, exiting
-2020/04/15 00:05:47 [notice] 7#7: exiting
-2020/04/15 00:05:47 [notice] 10#10: exiting
-2020/04/15 00:05:47 [notice] 8#8: exiting
-2020/04/15 00:05:47 [notice] 9#9: exiting
-2020/04/15 00:05:47 [notice] 7#7: exit
-2020/04/15 00:05:47 [notice] 10#10: exit
-2020/04/15 00:05:47 [notice] 8#8: exit
-2020/04/15 00:05:47 [notice] 9#9: exit
-2020/04/15 00:05:47 [notice] 1#1: signal 17 (SIGCHLD) received from 7
-2020/04/15 00:05:47 [notice] 1#1: worker process 7 exited with code 0
-2020/04/15 00:05:47 [notice] 1#1: worker process 8 exited with code 0
-2020/04/15 00:05:47 [notice] 1#1: worker process 10 exited with code 0
-2020/04/15 00:05:47 [notice] 1#1: signal 29 (SIGIO) received
-2020/04/15 00:05:47 [notice] 1#1: signal 17 (SIGCHLD) received from 10
-2020/04/15 00:05:47 [notice] 1#1: worker process 9 exited with code 0
-2020/04/15 00:05:47 [notice] 1#1: exit
-2020/04/15 00:08:06 [notice] 1#1: using the "epoll" event method
-2020/04/15 00:08:06 [notice] 1#1: nginx/1.16.1
-2020/04/15 00:08:06 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
-2020/04/15 00:08:06 [notice] 1#1: OS: Linux 4.19.76-linuxkit
-2020/04/15 00:08:06 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
-2020/04/15 00:08:06 [notice] 1#1: start worker processes
-2020/04/15 00:08:06 [notice] 1#1: start worker process 7
-2020/04/15 00:08:06 [notice] 1#1: start worker process 8
-2020/04/15 00:08:06 [notice] 1#1: start worker process 9
-2020/04/15 00:08:06 [notice] 1#1: start worker process 10
-2020/04/15 00:10:13 [notice] 1#1: signal 15 (SIGTERM) received, exiting
-2020/04/15 00:10:13 [notice] 9#9: exiting
-2020/04/15 00:10:13 [notice] 8#8: exiting
-2020/04/15 00:10:13 [notice] 8#8: exit
-2020/04/15 00:10:13 [notice] 10#10: exiting
-2020/04/15 00:10:13 [notice] 10#10: exit
-2020/04/15 00:10:13 [notice] 7#7: exiting
-2020/04/15 00:10:13 [notice] 9#9: exit
-2020/04/15 00:10:13 [notice] 7#7: exit
-2020/04/15 00:10:13 [notice] 1#1: signal 17 (SIGCHLD) received from 8
-2020/04/15 00:10:13 [notice] 1#1: worker process 8 exited with code 0
-2020/04/15 00:10:13 [notice] 1#1: signal 29 (SIGIO) received
-2020/04/15 00:10:13 [notice] 1#1: signal 17 (SIGCHLD) received from 9
-2020/04/15 00:10:13 [notice] 1#1: worker process 9 exited with code 0
-2020/04/15 00:10:13 [notice] 1#1: worker process 10 exited with code 0
-2020/04/15 00:10:13 [notice] 1#1: signal 29 (SIGIO) received
-2020/04/15 00:10:13 [notice] 1#1: signal 17 (SIGCHLD) received from 10
-2020/04/15 00:10:13 [notice] 1#1: signal 17 (SIGCHLD) received from 7
-2020/04/15 00:10:13 [notice] 1#1: worker process 7 exited with code 0
-2020/04/15 00:10:13 [notice] 1#1: exit
-2020/04/15 00:10:21 [notice] 1#1: using the "epoll" event method
-2020/04/15 00:10:21 [notice] 1#1: nginx/1.16.1
-2020/04/15 00:10:21 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
-2020/04/15 00:10:21 [notice] 1#1: OS: Linux 4.19.76-linuxkit
-2020/04/15 00:10:21 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
-2020/04/15 00:10:21 [notice] 1#1: start worker processes
-2020/04/15 00:10:21 [notice] 1#1: start worker process 6
-2020/04/15 00:10:21 [notice] 1#1: start worker process 7
-2020/04/15 00:10:21 [notice] 1#1: start worker process 8
-2020/04/15 00:10:21 [notice] 1#1: start worker process 9
-2020/04/15 00:10:27 [notice] 1#1: signal 15 (SIGTERM) received, exiting
-2020/04/15 00:10:27 [notice] 6#6: exiting
-2020/04/15 00:10:27 [notice] 7#7: exiting
-2020/04/15 00:10:27 [notice] 8#8: exiting
-2020/04/15 00:10:27 [notice] 8#8: exit
-2020/04/15 00:10:27 [notice] 9#9: exiting
-2020/04/15 00:10:27 [notice] 6#6: exit
-2020/04/15 00:10:27 [notice] 7#7: exit
-2020/04/15 00:10:27 [notice] 9#9: exit
-2020/04/15 00:10:27 [notice] 1#1: signal 17 (SIGCHLD) received from 6
-2020/04/15 00:10:27 [notice] 1#1: worker process 6 exited with code 0
-2020/04/15 00:10:27 [notice] 1#1: worker process 7 exited with code 0
-2020/04/15 00:10:27 [notice] 1#1: worker process 8 exited with code 0
-2020/04/15 00:10:27 [notice] 1#1: signal 29 (SIGIO) received
-2020/04/15 00:10:27 [notice] 1#1: signal 17 (SIGCHLD) received from 7
-2020/04/15 00:10:27 [notice] 1#1: signal 17 (SIGCHLD) received from 9
-2020/04/15 00:10:27 [notice] 1#1: worker process 9 exited with code 0
-2020/04/15 00:10:27 [notice] 1#1: exit
-2020/04/15 00:10:35 [notice] 1#1: using the "epoll" event method
-2020/04/15 00:10:35 [notice] 1#1: nginx/1.16.1
-2020/04/15 00:10:35 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
-2020/04/15 00:10:35 [notice] 1#1: OS: Linux 4.19.76-linuxkit
-2020/04/15 00:10:35 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
-2020/04/15 00:10:35 [notice] 1#1: start worker processes
-2020/04/15 00:10:35 [notice] 1#1: start worker process 6
-2020/04/15 00:10:35 [notice] 1#1: start worker process 7
-2020/04/15 00:10:35 [notice] 1#1: start worker process 8
-2020/04/15 00:10:35 [notice] 1#1: start worker process 9
-2020/04/15 00:12:40 [info] 6#6: *2 client closed connection while waiting for request, client: 172.18.0.1, server: 0.0.0.0:80
-2020/04/15 00:16:15 [info] 6#6: *4 client closed connection while waiting for request, client: 172.18.0.1, server: 0.0.0.0:80
-2020/04/15 00:20:39 [info] 6#6: *8 client closed connection while waiting for request, client: 172.18.0.1, server: 0.0.0.0:80
+2020/04/23 11:43:53 [error] 9#9: *147 FastCGI sent in stderr: "PHP message: PHP Warning:  require(/var/www/html/ibilling_old/vendor/guzzlehttp/promises/src/functions_include.php): failed to open stream: No such file or directory in /var/www/html/ibilling_old/vendor/composer/autoload_real.php on line 54PHP message: PHP Fatal error:  require(): Failed opening required '/var/www/html/ibilling_old/vendor/guzzlehttp/promises/src/functions_include.php' (include_path='.:/opt/bitnami/php/lib/php') in /var/www/html/ibilling_old/vendor/composer/autoload_real.php on line 54" while reading response header from upstream, client: 172.21.0.1, server: localhost, request: "GET /ibilling_old/ HTTP/1.1", upstream: "fastcgi://172.21.0.6:9000", host: "localhost"
+2020/04/23 11:44:06 [info] 9#9: *148 client closed connection while waiting for request, client: 172.21.0.1, server: 0.0.0.0:80
+2020/04/23 11:44:42 [error] 9#9: *150 FastCGI sent in stderr: "PHP message: PHP Warning:  require(/var/www/html/ibilling_old/vendor/symfony/polyfill-mbstring/bootstrap.php): failed to open stream: No such file or directory in /var/www/html/ibilling_old/vendor/composer/autoload_real.php on line 54PHP message: PHP Fatal error:  require(): Failed opening required '/var/www/html/ibilling_old/vendor/symfony/polyfill-mbstring/bootstrap.php' (include_path='.:/opt/bitnami/php/lib/php') in /var/www/html/ibilling_old/vendor/composer/autoload_real.php on line 54" while reading response header from upstream, client: 172.21.0.1, server: localhost, request: "GET /ibilling_old/ HTTP/1.1", upstream: "fastcgi://172.21.0.6:9000", host: "localhost"
+2020/04/23 11:44:54 [info] 9#9: *151 client closed connection while waiting for request, client: 172.21.0.1, server: 0.0.0.0:80
+2020/04/23 11:46:08 [error] 9#9: *154 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] No such file or directory in /var/www/html/ibilling_old/sysfrm/orm.php:260
+Stack trace:
+#0 /var/www/html/ibilling_old/sysfrm/orm.php(260): PDO->__construct('mysql:host=loca...', 'deecash_invoice', 'B[uJs=.X,$.p', Array)
+#1 /var/www/html/ibilling_old/sysfrm/orm.php(237): ORM::_setup_db('default')
+#2 /var/www/html/ibilling_old/sysfrm/boot.php(89): ORM::for_table('sys_appconfig')
+#3 /var/www/html/ibilling_old/index.php(21): require('/var/www/html/i...')
+#4 {main}
+  thrown in /var/www/html/ibilling_old/sysfrm/orm.php on line 260" while reading response header from upstream, client: 172.21.0.1, server: localhost, request: "GET /ibilling_old/ HTTP/1.1", upstream: "fastcgi://172.21.0.6:9000", host: "localhost"
+2020/04/23 11:46:10 [error] 9#9: *154 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.21.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://172.21.0.6:9000", host: "localhost", referrer: "http://localhost/ibilling_old/"
+2020/04/23 11:46:24 [info] 9#9: *153 client closed connection while waiting for request, client: 172.21.0.1, server: 0.0.0.0:80
+2020/04/23 11:50:51 [error] 9#9: *158 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1045] Access denied for user 'deecash_invoice'@'172.21.0.6' (using password: YES) in /var/www/html/ibilling_old/sysfrm/orm.php:260
+Stack trace:
+#0 /var/www/html/ibilling_old/sysfrm/orm.php(260): PDO->__construct('mysql:host=mysq...', 'deecash_invoice', 'B[uJs=.X,$.p', Array)
+#1 /var/www/html/ibilling_old/sysfrm/orm.php(237): ORM::_setup_db('default')
+#2 /var/www/html/ibilling_old/sysfrm/boot.php(89): ORM::for_table('sys_appconfig')
+#3 /var/www/html/ibilling_old/index.php(21): require('/var/www/html/i...')
+#4 {main}
+  thrown in /var/www/html/ibilling_old/sysfrm/orm.php on line 260" while reading response header from upstream, client: 172.21.0.1, server: localhost, request: "GET /ibilling_old/ HTTP/1.1", upstream: "fastcgi://172.21.0.6:9000", host: "localhost"
+2020/04/23 11:51:00 [error] 9#9: *158 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1045] Access denied for user 'deecash_invoice'@'172.21.0.6' (using password: YES) in /var/www/html/ibilling_old/sysfrm/orm.php:260
+Stack trace:
+#0 /var/www/html/ibilling_old/sysfrm/orm.php(260): PDO->__construct('mysql:host=mysq...', 'deecash_invoice', 'B[uJs=.X,$.p', Array)
+#1 /var/www/html/ibilling_old/sysfrm/orm.php(237): ORM::_setup_db('default')
+#2 /var/www/html/ibilling_old/sysfrm/boot.php(89): ORM::for_table('sys_appconfig')
+#3 /var/www/html/ibilling_old/index.php(21): require('/var/www/html/i...')
+#4 {main}
+  thrown in /var/www/html/ibilling_old/sysfrm/orm.php on line 260" while reading response header from upstream, client: 172.21.0.1, server: localhost, request: "GET /ibilling_old/ HTTP/1.1", upstream: "fastcgi://172.21.0.6:9000", host: "localhost"
+2020/04/23 11:51:05 [info] 9#9: *157 client closed connection while waiting for request, client: 172.21.0.1, server: 0.0.0.0:80
+2020/04/23 11:51:05 [error] 9#9: *158 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1045] Access denied for user 'deecash_invoice'@'172.21.0.6' (using password: YES) in /var/www/html/ibilling_old/sysfrm/orm.php:260
+Stack trace:
+#0 /var/www/html/ibilling_old/sysfrm/orm.php(260): PDO->__construct('mysql:host=mysq...', 'deecash_invoice', 'B[uJs=.X,$.p', Array)
+#1 /var/www/html/ibilling_old/sysfrm/orm.php(237): ORM::_setup_db('default')
+#2 /var/www/html/ibilling_old/sysfrm/boot.php(89): ORM::for_table('sys_appconfig')
+#3 /var/www/html/ibilling_old/index.php(21): require('/var/www/html/i...')
+#4 {main}
+  thrown in /var/www/html/ibilling_old/sysfrm/orm.php on line 260" while reading response header from upstream, client: 172.21.0.1, server: localhost, request: "GET /ibilling_old/ HTTP/1.1", upstream: "fastcgi://172.21.0.6:9000", host: "localhost"
+2020/04/23 11:51:19 [info] 9#9: *161 client closed connection while waiting for request, client: 172.21.0.1, server: 0.0.0.0:80
+2020/04/23 11:51:44 [error] 9#9: *163 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'172.21.0.6' (using password: YES) in /var/www/html/ibilling_old/sysfrm/orm.php:260
+Stack trace:
+#0 /var/www/html/ibilling_old/sysfrm/orm.php(260): PDO->__construct('mysql:host=mysq...', 'root', 'secret', Array)
+#1 /var/www/html/ibilling_old/sysfrm/orm.php(237): ORM::_setup_db('default')
+#2 /var/www/html/ibilling_old/sysfrm/boot.php(89): ORM::for_table('sys_appconfig')
+#3 /var/www/html/ibilling_old/index.php(21): require('/var/www/html/i...')
+#4 {main}
+  thrown in /var/www/html/ibilling_old/sysfrm/orm.php on line 260" while reading response header from upstream, client: 172.21.0.1, server: localhost, request: "GET /ibilling_old/ HTTP/1.1", upstream: "fastcgi://172.21.0.6:9000", host: "localhost"
+2020/04/23 11:51:58 [info] 9#9: *164 client closed connection while waiting for request, client: 172.21.0.1, server: 0.0.0.0:80
+2020/04/23 11:51:58 [error] 9#9: *163 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1049] Unknown database 'deecash_invoice' in /var/www/html/ibilling_old/sysfrm/orm.php:260
+Stack trace:
+#0 /var/www/html/ibilling_old/sysfrm/orm.php(260): PDO->__construct('mysql:host=mysq...', 'root', '', Array)
+#1 /var/www/html/ibilling_old/sysfrm/orm.php(237): ORM::_setup_db('default')
+#2 /var/www/html/ibilling_old/sysfrm/boot.php(89): ORM::for_table('sys_appconfig')
+#3 /var/www/html/ibilling_old/index.php(21): require('/var/www/html/i...')
+#4 {main}
+  thrown in /var/www/html/ibilling_old/sysfrm/orm.php on line 260" while reading response header from upstream, client: 172.21.0.1, server: localhost, request: "GET /ibilling_old/ HTTP/1.1", upstream: "fastcgi://172.21.0.6:9000", host: "localhost"
+2020/04/23 11:52:15 [info] 8#8: *166 client closed connection while waiting for request, client: 172.21.0.1, server: 0.0.0.0:80
+2020/04/23 11:52:40 [info] 9#9: *168 client closed connection while waiting for request, client: 172.21.0.1, server: 0.0.0.0:80
+2020/04/23 18:58:55 [info] 9#9: *170 client closed connection while waiting for request, client: 172.21.0.1, server: 0.0.0.0:80
+2020/04/23 19:49:11 [notice] 1#1: using the "epoll" event method
+2020/04/23 19:49:11 [notice] 1#1: nginx/1.16.1
+2020/04/23 19:49:11 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2020/04/23 19:49:11 [notice] 1#1: OS: Linux 4.19.76-linuxkit
+2020/04/23 19:49:11 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2020/04/23 19:49:11 [notice] 1#1: start worker processes
+2020/04/23 19:49:11 [notice] 1#1: start worker process 7
+2020/04/23 19:49:11 [notice] 1#1: start worker process 8
+2020/04/23 19:49:11 [notice] 1#1: start worker process 9
+2020/04/23 19:49:11 [notice] 1#1: start worker process 10
+2020/04/23 19:50:16 [info] 7#7: *1 client closed connection while waiting for request, client: 172.21.0.1, server: 0.0.0.0:80
+2020/04/23 20:05:41 [error] 7#7: *6 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.21.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://172.21.0.8:9000", host: "localhost", referrer: "http://localhost/"
+2020/04/23 20:12:05 [error] 7#7: *8 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.21.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://172.21.0.8:9000", host: "localhost", referrer: "http://localhost/"
+2020/04/23 20:12:08 [error] 7#7: *8 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.21.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://172.21.0.8:9000", host: "localhost", referrer: "http://localhost/"
+2020/04/23 20:12:19 [error] 7#7: *8 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.21.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://172.21.0.8:9000", host: "localhost", referrer: "http://localhost/"
+2020/04/23 20:12:53 [error] 7#7: *12 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.21.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://172.21.0.8:9000", host: "localhost", referrer: "http://localhost/"
+2020/04/23 20:13:05 [error] 7#7: *12 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.21.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://172.21.0.8:9000", host: "localhost", referrer: "http://localhost/"

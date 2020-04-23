@@ -1,0 +1,1 @@
+FROM nimmis/apache-php7:latest
