@@ -8,7 +8,7 @@ services:
             - local_network
         volumes:
             - /usr/local/var/www/html:/var/www/html
-            - ./nginx:/etc/nginx
+            - /usr/local/var/www/html/docker-environment/nginx:/etc/nginx
         ports:
             - 80:80
             - 443:443
@@ -26,13 +26,14 @@ services:
             - local_network
         volumes:
             - /usr/local/var/www/html:/var/www/html
-            - /usr/local/var/www/html/apache/conf/apache2.conf:/etc/apache2/apache2.conf
-            - /usr/local/var/www/html/apache/mods-enabled/dir.conf:/etc/apache2/mods-enabled/dir.conf
-            - /usr/local/var/www/html/apache/php/7.0/conf/php.ini:/etc/php/7.0/apache2/php.ini
-            - /usr/local/var/www/html/apache/php/7.0/conf/php.ini:/etc/php/7.0/fpm/php.ini
-            - /usr/local/var/www/html/apache/php/7.0/conf/php.ini:/etc/php/7.0/cli/php.ini
-            - /usr/local/var/www/html/apache/conf/vhosts:/etc/apache2/sites-enabled
-            - /usr/local/var/www/html/apache/logs:/var/log/apache2
+            - /usr/local/var/www/html/docker-environment/apache/conf/apache2.conf:/etc/apache2/apache2.conf
+            - /usr/local/var/www/html/docker-environment/apache/mods-enabled/dir.conf:/etc/apache2/mods-enabled/dir.conf
+            - /usr/local/var/www/html/docker-environment/apache/mods-enabled/rewrite.load:/etc/apache2/mods-enabled/rewrite.load
+            - /usr/local/var/www/html/docker-environment/apache/php/7.0/conf/php.ini:/etc/php/7.0/apache2/php.ini
+            - /usr/local/var/www/html/docker-environment/apache/php/7.0/conf/php.ini:/etc/php/7.0/fpm/php.ini
+            - /usr/local/var/www/html/docker-environment/apache/php/7.0/conf/php.ini:/etc/php/7.0/cli/php.ini
+            - /usr/local/var/www/html/docker-environment/apache/conf/vhosts:/etc/apache2/sites-enabled
+            - /usr/local/var/www/html/docker-environment/apache/logs:/var/log/apache2
         environment:
             - APACHE_SERVER_NAME=apache
             - APACHE_LOG_DIR=/var/logs/apache2
@@ -56,7 +57,7 @@ services:
         volumes:
             - /usr/local/var/www/html:/app
             - /usr/local/var/www/html:/var/www/html
-            
+            - /Users/budiantoip/.ssh:/root/.ssh
         ports:
             - 9000:9000
         depends_on:
@@ -80,7 +81,7 @@ services:
         volumes:
             - /usr/local/var/www/html:/app
             - /usr/local/var/www/html:/var/www/html
-            
+            - /Users/budiantoip/.ssh:/root/.ssh
         ports:
             - 9001:9000
         depends_on:
@@ -106,7 +107,7 @@ services:
         volumes:
             - /usr/local/var/www/html:/app
             - /usr/local/var/www/html:/var/www/html
-            
+            - /Users/budiantoip/.ssh:/root/.ssh
         ports:
             - 9002:9000
         depends_on:
@@ -132,7 +133,7 @@ services:
         volumes:
             - /usr/local/var/www/html:/app
             - /usr/local/var/www/html:/var/www/html
-            
+            - /Users/budiantoip/.ssh:/root/.ssh
         ports:
             - 9003:9000
         depends_on:
@@ -158,7 +159,7 @@ services:
         volumes:
             - /usr/local/var/www/html:/app
             - /usr/local/var/www/html:/var/www/html
-            
+            - /Users/budiantoip/.ssh:/root/.ssh
         ports:
             - 9004:9000
         depends_on:
@@ -182,9 +183,10 @@ services:
         environment:
             - MYSQL_ROOT_PASSWORD=secret
         volumes:
-            - yogurt_mysql-data:/var/lib/mysql
-            - ./mysql/log:/var/log/mysql
-            - ./mysql/config/my.cnf:/etc/mysql/my.cnf
+            - mysql-data:/var/lib/mysql
+            #- /usr/local/var/www/html/docker-environment/mysql/data:/var/lib/mysql:rw
+            - /usr/local/var/www/html/docker-environment/mysql/log:/var/log/mysql
+            - /usr/local/var/www/html/docker-environment/mysql/config/my.cnf:/etc/mysql/my.cnf
         ports:
             - 3306:3306
 
@@ -194,7 +196,8 @@ services:
         networks: 
             - local_network
         volumes:
-            - yogurt_mongo-data:/data/db
+            #- mongo-data:/data/db
+            - /usr/local/var/www/html/docker-environment/mongo/data:/data/db:rw
         ports:
             - 27017:27017
 
@@ -218,5 +221,5 @@ networks:
     local_network:
 
 volumes:
-    yogurt_mysql-data:
-    yogurt_mongo-data:
+    mysql-data:
+    mongo-data:
