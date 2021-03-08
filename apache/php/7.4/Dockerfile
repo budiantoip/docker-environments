@@ -6,10 +6,10 @@ MAINTAINER Budianto IP <budiantoip@gmail.com>
 ENV DEBIAN_FRONTEND noninteractive
 
 RUN apt-get update && \
-apt-get install python-software-properties && \
+apt-get install -y python-software-properties && \
 LC_ALL=C.UTF-8 add-apt-repository ppa:ondrej/php && \
 apt-get update && \
-apt-get install php7.4
+apt-get install -y php7.4
 
 RUN a2dismod php7.0 && a2enmod php7.4
 
