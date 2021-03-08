@@ -1,0 +1,2 @@
+# Conflicts: php5
+LoadModule rewrite_module /usr/lib/apache2/modules/libphp7.2.so
