@@ -11,7 +11,7 @@ LC_ALL=C.UTF-8 add-apt-repository ppa:ondrej/php && \
 apt-get update && \
 apt-get install -y php7.4
 
-RUN a2dismod php7.0 && a2enmod php7.4
+# RUN a2dismod php7.0 && a2enmod php7.4
 
 RUN apt-get update && \
 apt-get install -y php libapache2-mod-php  \
