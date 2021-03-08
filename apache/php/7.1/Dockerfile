@@ -5,8 +5,7 @@ MAINTAINER Budianto IP <budiantoip@gmail.com>
 # disable interactive functions
 ENV DEBIAN_FRONTEND noninteractive
 
-RUN apt-get install -y python-software-properties && \
-echo "y" | LC_ALL=C.UTF-8 add-apt-repository ppa:ondrej/php && \
+RUN echo "y" | LC_ALL=C.UTF-8 add-apt-repository ppa:ondrej/php && \
 apt-get update && \
 apt-get install -y php7.1
 
