@@ -6,7 +6,12 @@ MAINTAINER Budianto IP <budiantoip@gmail.com>
 ENV DEBIAN_FRONTEND noninteractive
 
 RUN apt-get update && \
-apt-get install -y php libapache2-mod-php  \
+apt-get install python-software-properties && \
+LC_ALL=C.UTF-8 add-apt-repository ppa:ondrej/php && \
+apt-get update && \
+apt-get install php7.3
+
+RUN apt-get install -y php libapache2-mod-php  \
 php-fpm php-cli php-mysqlnd php-pgsql php-sqlite3 php-mongodb \
 php-redis php-memcache php-memcached \
 php-apcu php-intl php-imagick php-mcrypt php-json php-gd php-curl \
