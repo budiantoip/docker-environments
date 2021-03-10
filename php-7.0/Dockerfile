@@ -5,6 +5,9 @@ RUN apt-get update && apt-get install -y curl libmemcached-dev libz-dev libbz2-d
     libmcrypt-dev pkg-config libssl-dev zlib1g-dev libxml2-dev libvpx-dev libxpm-dev \
     zip unzip git
 
+RUN pecl update-channels
+RUN pecl install mongodb
+
 RUN git clone https://github.com/creationix/nvm.git "$HOME/.nvm";
 RUN chmod -R 777 "$HOME/.nvm/";
 RUN bash "$HOME/.nvm/install.sh";

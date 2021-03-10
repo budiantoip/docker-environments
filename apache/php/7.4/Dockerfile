@@ -7,19 +7,20 @@ ENV DEBIAN_FRONTEND noninteractive
 
 RUN echo "y" | LC_ALL=C.UTF-8 add-apt-repository ppa:ondrej/php && \
 apt-get update && \
-apt-get install -y php7.4
+apt-get remove -y php-* php7.0* && \
+apt-get install -y php7.4 php7.4-apcu php7.4-curl php7.4-gd php7.4-igbinary \
+                   php7.4-imagick php7.4-intl php7.4-mbstring php7.4-mcrypt php7.4-memcache php7.4-memcached php7.4-mongodb php7.4-mysql php7.4-pgsql php7.4-redis php7.4-sqlite3 php7.4-xml php7.4-xsl php7.4-zip
+#apt-get install -y php7.4-cli php7.4-common php7.4-curl php7.4-gd php7.4-json php7.4-mbstring php7.4-intl php7.4-mysql php7.4-xml php7.4-zip
 
-# RUN a2dismod php7.0 && a2enmod php7.4
+# RUN docker-php-ext-install apcu calendar Core ctype curl date dom exif fileinfo \
+#     filter ftp gd gettext hash iconv igbinary imagick intl json libxml mbstring mcrypt \
+#     memcache memcached mongodb mysqli mysqlnd openssl pcntl pcre PDO pdo_mysql pdo_pgsql \
+#     pdo_sqlite pgsql Phar posix readline redis Reflection session shmop SimpleXML sockets SPL \
+#     sqlite3 standard sysvmsg sysvsem sysvshm tokenizer wddx xml xmlreader xmlwriter xsl Zend OPcache \
+#     zip zlib
 
-RUN apt-get update && \
-apt-get install -y php libapache2-mod-php  \
-php-fpm php-cli php-mysql php-pgsql php-sqlite3 php-mongodb \
-php-redis php-memcache php-memcached \
-php-apcu php-intl php-imagick php-mcrypt php-json php-gd php-curl \
-php-log php-mail \
-php-xml php-mbstring php-tcpdf php-zip && \
-phpenmod mcrypt && \
-rm -rf /var/lib/apt/lists/*
+# RUN pecl update-channels
+# RUN pecl install mongodb
 
 #RUN curl -sS https://getcomposer.org/installer | php
 #RUN mv composer.phar /usr/local/bin/composer

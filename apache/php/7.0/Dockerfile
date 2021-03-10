@@ -15,6 +15,9 @@ php-xml php-mbstring php-tcpdf php-zip && \
 phpenmod mcrypt && \
 rm -rf /var/lib/apt/lists/*
 
+RUN pecl update-channels
+RUN pecl install mongodb
+
 #RUN curl -sS https://getcomposer.org/installer | php
 #RUN mv composer.phar /usr/local/bin/composer
 
