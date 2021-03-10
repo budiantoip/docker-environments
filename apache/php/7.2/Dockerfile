@@ -7,24 +7,14 @@ ENV DEBIAN_FRONTEND noninteractive
 
 RUN echo "y" | LC_ALL=C.UTF-8 add-apt-repository ppa:ondrej/php && \
 apt-get update && \
-apt-get install -y php7.2
-
-# RUN a2dismod php7.0 && a2enmod php7.2
-
-RUN apt-get install -y php libapache2-mod-php  \
-php-fpm php-cli php-mysql php-pgsql php-sqlite3 php-mongodb \
-php-redis php-memcache php-memcached \
-php-apcu php-intl php-imagick php-mcrypt php-json php-gd php-curl \
-php-log php-mail \
-php-xml php-mbstring php-tcpdf php-zip && \
-phpenmod mcrypt && \
-rm -rf /var/lib/apt/lists/*
+apt-get remove -y php-* php7.0* && \
+apt-get install -y php7.2 php7.2-dev php7.2-apcu php7.2-curl php7.2-gd php7.2-igbinary \
+                   php7.2-imagick php7.2-intl php7.2-mbstring php7.2-mcrypt php7.2-memcache php7.2-memcached php7.2-mongodb php7.2-mysql php7.2-pgsql php7.2-redis php7.2-sqlite3 php7.2-xml php7.2-xsl php7.2-zip
 
 RUN pecl update-channels
-RUN pecl install mongodb
 
-#RUN curl -sS https://getcomposer.org/installer | php
-#RUN mv composer.phar /usr/local/bin/composer
+RUN curl -sS https://getcomposer.org/installer | php
+RUN mv composer.phar /usr/local/bin/composer
 
 RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
 RUN php -r "if (hash_file('sha384', 'composer-setup.php') === '756890a4488ce9024fc62c56153228907f1545c228516cbf63f885e036d37e9a59d27d63f46af1d4d07ee0f76181c7d3') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
