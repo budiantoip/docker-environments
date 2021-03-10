@@ -1,5 +1,7 @@
 /apache/logs
 /mysql/backup
 /mysql/log
+.idea
 *.zip
 .bash*
+.DS_Store
