@@ -5,14 +5,29 @@ MAINTAINER Budianto IP <budiantoip@gmail.com>
 # disable interactive functions
 ENV DEBIAN_FRONTEND noninteractive
 
+RUN apt-get update && \
+apt-get install -y php libapache2-mod-php  \
+php-fpm php-cli php-mysqlnd php-pgsql php-sqlite3 php-mongodb \
+php-redis php-memcache php-memcached \
+php-apcu php-intl php-imagick php-mcrypt php-json php-gd php-curl \
+php-log php-mail \
+php-xml php-mbstring php-tcpdf php-zip && \
+phpenmod mcrypt && \
+rm -rf /var/lib/apt/lists/*
+
 RUN echo "y" | LC_ALL=C.UTF-8 add-apt-repository ppa:ondrej/php && \
 apt-get update && \
-apt-get remove -y php-* php7.0* && \
 apt-get install -y php-mail libapache2-mod-php7.2 php7.2 php7.2-dev php7.2-apcu php7.2-curl php7.2-gd php7.2-igbinary \
                    php7.2-imagick php7.2-intl php7.2-mbstring php7.2-mcrypt php7.2-memcache \
                    php7.2-memcached php7.2-mongodb php7.2-mysql php7.2-pgsql php7.2-redis \
                    php7.2-sqlite3 php7.2-xml php7.2-xsl php7.2-zip \
                    php7.2-fpm php7.2-cli
+
+RUN a2dismod php7.0
+RUN a2enmod proxy_fcgi setenvif
+RUN a2enmod php7.2
+RUN a2enconf php7.2-fpm
+RUN service apache2 restart
 
 RUN pecl update-channels
 
