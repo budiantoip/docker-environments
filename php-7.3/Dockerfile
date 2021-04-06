@@ -3,10 +3,9 @@ FROM bitnami/php-fpm:7.3.16
 RUN apt-get update && apt-get install -y curl libmemcached-dev libz-dev libbz2-dev libpq-dev \
     libjpeg-dev libpng-dev libwebp-dev libfreetype6-dev webp \
     libmcrypt-dev pkg-config libssl-dev zlib1g-dev libxml2-dev libvpx-dev libxpm-dev \
-    zip unzip git
+    zip unzip git php7.3-dev
 
-RUN pecl update-channels
-RUN pecl install mongodb
+RUN pecl update-channels && pecl install mongodb
 
 RUN git clone https://github.com/creationix/nvm.git "$HOME/.nvm";
 RUN chmod -R 777 "$HOME/.nvm/";
