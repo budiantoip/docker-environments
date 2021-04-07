@@ -5,6 +5,8 @@ RUN apt-get update && apt-get install -y curl libmemcached-dev libz-dev libbz2-d
     libmcrypt-dev pkg-config libssl-dev zlib1g-dev libxml2-dev libvpx-dev libxpm-dev \
     zip unzip git php7.3-dev
 
+RUN apt-get install -y vim nano
+
 RUN pecl update-channels && pecl install mongodb
 
 RUN git clone https://github.com/creationix/nvm.git "$HOME/.nvm";
@@ -17,5 +19,3 @@ RUN bash -c 'source $HOME/.nvm/nvm.sh && \
 
 RUN curl -sS https://getcomposer.org/installer | php
 RUN mv composer.phar /usr/local/bin/composer
-
-RUN apt update && apt-get install -y vim nano

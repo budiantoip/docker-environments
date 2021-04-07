@@ -3,10 +3,9 @@ FROM bitnami/php-fpm:7.2.29
 RUN apt-get update && apt-get install -y curl libmemcached-dev libz-dev libbz2-dev libpq-dev \
     libjpeg-dev libpng-dev libwebp-dev libfreetype6-dev webp \
     libmcrypt-dev pkg-config libssl-dev zlib1g-dev libxml2-dev libvpx-dev libxpm-dev \
-    zip unzip git
+    zip unzip git php-mongodb
 
-RUN pecl update-channels
-RUN pecl install mongodb
+RUN apt-get install -y vim nano
 
 RUN git clone https://github.com/creationix/nvm.git "$HOME/.nvm";
 RUN chmod -R 777 "$HOME/.nvm/";
@@ -24,11 +23,7 @@ RUN php -r "if (hash_file('sha384', 'composer-setup.php') === '756890a4488ce9024
 RUN php composer-setup.php
 RUN php -r "unlink('composer-setup.php');"
 
-RUN apt update && apt-get install -y vim nano
-
 RUN apt-get -y install gcc make autoconf libc-dev pkg-config
 RUN apt-get -y install php7.2-dev
 RUN apt-get -y install libmcrypt-dev
 RUN pecl install mcrypt-1.0.1
-
-RUN apt-get -y install php7.2-mongodb
