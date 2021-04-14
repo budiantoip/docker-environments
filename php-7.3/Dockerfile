@@ -27,4 +27,3 @@ RUN php -r "unlink('composer-setup.php');"
 
 RUN apt-get -y install gcc make autoconf libc-dev pkg-config
 RUN apt-get -y install libmcrypt-dev
-RUN pecl install mcrypt-1.0.1
