@@ -13,7 +13,11 @@ apt-get install -y php-mail libapache2-mod-php7.3 php7.3 php7.3-dev php7.3-apcu 
                    php7.3-sqlite3 php7.3-xml php7.3-xsl php7.3-zip \
                    php7.3-fpm php7.3-cli
 
-RUN a2dismod php7.0 && a2enmod php7.3
+RUN a2dismod php7.0 && \
+    a2enmod proxy_fcgi setenvif && \
+    a2enmod php7.3 && \
+    a2enconf php7.3-fpm && \
+    service apache2 restart
 
 RUN pecl update-channels
 
