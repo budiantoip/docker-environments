@@ -1,4 +1,4 @@
-FROM nimmis/apache
+FROM nimmis/apache-php7
 
 MAINTAINER Budianto IP <budiantoip@gmail.com>
 
